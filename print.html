@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "divone">
+        div one content is here 
+        <button onclick="myfun('divone')"> Divone </button>
+    </div>
+    <div id="divtwo">
+        div two content is here 
+        <button onclick="myfun('divtwo')"> DivTwo </button>
+    </div>
+    <div id="divthree">
+        div three content is here 
+        <button onclick="myfun('divthree')"> Divthree </button>
+    </div>
+    <button onclick="mywholepage()">PrintWhole</button>
+
+    <script>
+
+        function mywholepage(){
+            window.print();
+        }
+        function myfun(paravalue){
+            var backup = document.body.innerHTML;
+            var divcontent = document.getElementById(paravalue).innerHTML;
+            document.body.innerHTML = divcontent; // overwriting value of window.print to print single div
+            window.print(); // printing single div
+            document.body.innerHTML = backup; // over writing the original value to window.print
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="access">Java </p>
+    <p class="asd"> Script </p>
+    <p class="asd"> Script1 </p>
+    <p class="asd"> Script2 </p>
+
+    <ul><li>first</li>
+        <li>second</li>
+        <li>third</li></ul>
+
+
+    <!-- how to access elements by ID -->
+    <!-- <script type="text/javascript">
+        var a = document.getElementById("access").innerHTML;
+        document.write(a);
+        document.write("<br>");
+    </script> -->
+
+    <!-- access elements by class -->
+    <!-- <script type="text/javascript">
+        var b = document.getElementsByClassName("asd")[0].    innerHTML;
+        document.write(b);
+        document.write("<br;>");
+    </script> -->
+    
+    <!-- how to access elements by tagname -->
+    <!-- <script type="text/javascript">
+        var tag = document.getElementsByTagName("p");
+        document.write(tag);
+        document.write("<br>");
+    </script> -->
+
+    <!-- how to access first elements -->
+    <!-- <script>
+        var p = document.querySelector("p").innerHTML;
+        document.write(p);
+        document.write("<br>");
+    </script> -->
+
+    <script>
+        var child = document.body.children;
+        console.log(child);
+    </script>
+    
+    <!-- add a new child in body -->
+    <script>
+        var para = document.createElement("p");
+        var text_node = document.createTextNode("THIS IS NEW PARA ");
+        para.appendChild(text_node);
+        console.log(para);
+        document.body.appendChild(para);
+    </script>
+
+
+    <!-- access first child and last child -->
+    <script>
+    var list = document.querySelector("ul");
+    console.log(list);
+    console.log(list.firstChild);
+    console.log(list.lastChild);
+    </script>
+
+    <!-- siblings -->
+    <script>
+        var first_sibling = access.nextElementSibling;
+        console.log(first_sibling);
+    </script>
+
+    <!-- parent node -->
+    <script>
+        console.log(list.parentNode);
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- list and form for switch cases starting from line 75 -->
+    <h3>Enter one opeartion </h3>
+    <ul>
+        <li> add </li>
+        <li> sub </li>
+        <li> mul </li>
+    </ul>
+    <br>
+    <form>
+        <input type="text" name="" id="choices">
+        <br>
+        <button onclick="myfun()"> Click Here</button>
+    </form>
+    <!-- =============================================================== -->
+
+    <script type="text/javascript">
+
+        // variable declarion and operators 
+
+        // var a = 40;
+        // var b = 100;
+        // sum = a + b ;
+        // document.write(sum);
+        // document.write("<br>");
+        // var asd = "this all should come \'n\' in string";
+        // document.write(asd);
+        // document.write("<br>")
+        // var name = "saad";
+        // var surname = "md";
+        // document.write(surname + " " + name)
+        // var nm = 5;
+        // nm1 = 15 % nm ;
+        // document.write("<br>");
+        // document.write(nm1);
+
+        //  ===============================================
+
+
+        // conditional if else
+
+        // document.write("<br>")
+        // if ( nm1 == 0) {
+        //     document.write("if is executed");
+        // } else {
+        //     document.write("else is executed")
+        // }
+
+        // var a = 1;
+        // var b = 1;
+        // if (a == b){
+        //     document.write("<br>")
+        //     document.write("equal value and diffrent datatypes")
+        //     document.write("<br>")
+        // } else {
+        //     document.write("unequal")
+        // }
+
+        // if (a === b){
+        //     document.write("value and datatype both are equal")
+        // } 
+        // ==============================================================
+
+        //  Switch cases
+        function myfun(){
+            var choice = document.getElementById("choices").value;
+            switch (choice) {
+                 case "add": var a = 5;
+                    var b = 3;
+                    var sum = a + b;
+                    document.write(" sum case is running " + sum);
+                    break;
+       
+                case "sub": var a = 5;
+                    var b = 3;
+                    var sub = a - b;
+                    document.write(" sub case is running " + sub);
+                    break;
+       
+                case "mul": var a = 5;
+                    var b = 3;
+                    var mult = a * b;
+                    document.write(" multiplication case is running " + mult);
+                    break;
+                
+                default: alert("Not a valid input")
+            }
+        }
+    </script>
+</body>
+
+</html>
